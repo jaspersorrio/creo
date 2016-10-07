@@ -1,0 +1,16 @@
+<HTML>
+  <HEAD>
+    <TITLE>
+      Creo Get Weight of assembly and sub parts
+    </TITLE>
+  </HEAD>
+  <BODY>
+   <H1>{{Model Name}}</H1>
+    <DIV ID="PROE_OUTPUT"></DIV>
+    <SCRIPT>
+      var mGlob = new ActiveXObject("pfc.MpfcCOMGlobal");
+      var mSession = mGlob.GetProESession();
+      PROE_OUTPUT.innerHTML = mSession.UIReadStringMessage(false);
+    </SCRIPT>
+  </BODY>
+</HTML>
